@@ -1,0 +1,229 @@
+/*
+
+Detta dokument har de generella designaspekterna för infosidorna så som: storlek, position, rundade hörn etc
+
+Sedan finns det ett separat Max.css och Milla.css som bestämmer alla färger på sidorna :)
+
+OBS! Home alltså huvudsidan har eget separat då den ej delar design eller struktur med de andra två.
+
+*/
+
+body {
+    margin: 0;
+}
+
+/*  generella ändringar så man slipper ändra till varje klass  */
+h1, h2, a, p {
+    color: white;
+}
+
+h1, h2, a {
+    text-transform: uppercase;
+}
+
+.active {
+    font-weight: 700;
+}
+
+#root { 
+    display: flex;
+    margin-top: 4em;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* Rubriksdiv som visas först på sidan tillsammans med alla a-tags till sidan */
+.main--div {
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5em;
+}
+
+.main-info--div {
+    border-radius: 2em;
+    width: 50em;
+    display: flex;
+    margin-right: 2em;
+    padding: 2em;
+}
+
+.main-info-text--div {
+    margin-left: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:end;
+}
+
+/* ser till att alla element har korrekt tjocklek och avstånd mellan varandra*/
+.main-info-text--div >* {
+    font-weight: 400;
+    margin: 0 0 1em 0;
+}
+
+/* Bestämmer alla text storlekar*/
+.main-info-text--div > h1 {
+    font-size: 4em;
+}
+
+.main-info-text--div > h2 {
+    font-size: 2.4em;
+}
+
+.main-info-text--div > p {
+    font-size: 1em;
+}
+
+/* Ser till att bilden inte har sin ordinarie storlek*/
+.playerCard {
+    width: 17em;
+}
+
+/* ser till att listan inte har den ordinarie list designen och sätter en text storlek*/
+.main-link--ul {
+    list-style-type: none;
+    font-size: 2em;
+}
+
+/* Ser till att länkarna är stylade och att hover-styling fungerar*/
+.link-buttons--a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.link-buttons--a:hover {
+    transform: scale(1.2);
+}
+
+.drop-down--div{
+    display: none;
+}
+
+/*  divven som länkas till med a-tags och ser till att innehållet är mitt på sidan 
+
+a-taggen som länkar till en div hamnar så att divven hamnar högst upp på sidan så för att se till att innehållet är centrerat
+så finns denna container div!
+*/
+.info-container--div {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  divven som faktiskt syns och visas på sidan  
+
+Allt under är elementen i divven som designas
+*/
+.info-box--div{
+    padding: 2em;
+    border-radius: 2em;
+    max-width: 70em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box-text--div{
+    margin-right: 2em;
+}
+
+.info-box--p{
+    font-size: 1.2em;
+}
+
+.info-box--h1 {
+    font-size: 2.5em;
+}
+
+.info-box--h2 {
+    font-size: 1.8em;
+}
+
+.selfie--img {
+    width: 15em;
+}
+
+.horizontal--img{
+    max-width: 30em;
+}
+
+#video-box--div{
+    flex-direction: column;
+}
+
+video {
+    width: 70%;
+}
+
+
+/* Design i form av rundade hörn och skugga för all media (bilder och video)*/
+.media-border {
+    border-radius: 2em;
+    border: 0.15em solid white;
+}
+
+@media (max-width:650px) {
+    .nav-bar-button--a {
+        font-size: 0.8em;
+    }
+
+    .nav-bar-list--ul > li {
+        margin: 0 
+    }
+
+    .main--div{
+        flex-direction: column;
+    }
+    .main-link--ul{
+        margin-bottom: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .main-info--div{
+        margin: 0;
+        width: 80%;
+    }
+
+    .main-info-text--div > h1 {
+        font-size: 3.5em;
+        text-align: end;
+    }
+
+    .main-info-text--div > h2 {
+        font-size: 1.8em;
+        text-align: end;
+    }
+
+    .playerCard {
+        max-width: 50%;
+    }
+
+    .info-box--div{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .info-container--div {
+        height: auto;
+        padding-top: 10em;
+    }
+
+    .selfie--img {
+        width: 18em;
+    }
+    
+    .horizontal--img{
+        max-width: 100%;
+    }
+
+    
+}

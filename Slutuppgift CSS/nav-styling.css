@@ -1,0 +1,42 @@
+/*
+
+Detta dokument designar Navigations baren högst upp på de tre sidorna och för att slippa upprepa kod så har den ett eget dokument
+
+bakgrundsfärg och box-shadow bestäms dock i separat dokument då det skiftar från de tre sidorna :)
+
+*/
+nav { 
+    color: rgb(212, 246, 253);
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /*  med goda marginaler för att det aldrig ska bli fel  */
+}
+
+.nav-bar-list--ul {
+    list-style-type: none;
+    display: flex;
+    margin: 1em;
+    padding: 0;
+}
+
+.nav-bar-list--ul > li {
+    margin: 0 0.5em;
+}
+
+.nav-bar-button--a {
+    width: 6.2em;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+    text-transform: uppercase;
+}
+
+.nav-bar-button--a:hover { 
+    transform: scale(1.2);
+}

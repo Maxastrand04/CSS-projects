@@ -1,0 +1,32 @@
+/*
+
+Detta dokument är till för att färga Max sidans element och bakgrund till de korrekta färgerna
+
+*/
+
+body {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+nav {
+    background-color: rgb(254, 162, 162);
+    box-shadow: 0 0 0.2em 0.2em rgb(253, 88, 88);
+}
+
+.main-info--div {
+    background-color: rgb(254, 162, 162);
+    box-shadow: 0 0 0.2em 0.2em rgb(253, 88, 88);
+}
+
+.link-buttons--a {
+    color: rgb(253, 88, 88);
+}
+
+.info-box--div{
+    background-color: rgb(254, 162, 162);
+    box-shadow: 0 0 0.2em 0.2em rgb(253, 88, 88);
+}
+
+.media-border {
+    box-shadow: 0 0 0.2em 0.2em rgb(253, 88, 88);
+}

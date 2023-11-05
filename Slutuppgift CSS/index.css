@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    background-color: rgb(38, 139, 221);
+    background-image: url(https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/fut/toty/common/f23-toty-about-section-xl.png.adapt.320w.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-size: 40em;
+    background-position: right;
+}   
+
+nav{
+    background-color: rgb(46, 83, 176);
+    box-shadow: 0 0 0.2em 0.2em rgb(0, 0, 106);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, a, p {
+    color: white;
+}
+
+header { 
+    position: relative;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3em;
+    color: white;
+    margin-bottom: 5em;
+    animation: init-load-default 0.6s ease forwards;
+    z-index: 0;
+}
+
+.header--div {
+    background-color: rgb(46, 83, 176);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 0.2em 0.2em rgb(0, 0, 106);
+    padding: 2em;
+    border-radius: 2em;
+    margin-top: 5em;
+}
+
+/* Textstorlek på alla text elementen i Header */
+.header--div > h1 {
+    font-size: 4em;
+}
+
+.header--div > h2 {
+    font-size: 2.4em;
+}
+
+.header--div > p {
+    font-size: 1.5em;
+}
+
+
+
+
+.active {
+    font-weight: 700;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.player-card--img {
+    width: 17em;
+    border-radius: 15em;
+}
+
+/*  infokortens lista och list element  */
+#player-card-list--ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#player-card-list--ul > li {
+    margin: 0 10em;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  Infokortens styling */
+.player-info--div {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    max-width: 20em;
+    background-color: rgb(46, 83, 176);
+    padding: 1em 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em 0.2em rgb(0, 0, 106);
+    transition: background-color 0.2s;
+}
+
+#max-info--div{
+    animation: init-load-max 0.6s ease forwards 0.5s;
+}
+
+#milla-info--div{
+    animation: init-load-milla 0.6s ease forwards 0.5s;
+}
+
+.player-info--div:hover {
+    background-color: rgba(0, 0, 106, 0.8);
+}
+
+.player-info--div > * {
+    color: white;
+    cursor:pointer;
+}
+
+@media (max-width:650px) {
+
+    /*  navbar knappar  */
+    .nav-bar-button--a {
+        font-size: 0.8em;
+    }
+
+    /*  rubrikrutan  */
+    .header--div{
+        margin-top: 8em;
+        width: 80%;
+    }
+    .header--div > h1{
+        font-size: 3em;
+    }
+    .header--div > h2{
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .header--div > p {
+        font-size: 1em;
+    }
+
+    /*  länkkorten  */
+    .player-info--div > p {
+        display: none;
+    }
+    #player-card-list--ul {
+        flex-direction: column;
+    }
+    #player-card-list--ul > li {
+        margin-bottom: 3em;
+    }
+
+    /*  Ändrar animation från sidorna till ovanifrån*/
+    #max-info--div{
+        animation: init-load-default 0.6s ease forwards 0.5s;
+    }
+    
+    #milla-info--div{
+        animation: init-load-default 0.6s ease forwards 1s;
+    }
+}
+
+@keyframes init-load-default{
+    0% {
+        opacity: 0;
+        top: -7em;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes init-load-max{
+    0% {
+        opacity: 0;
+        left: -7em;
+    }
+
+    100%
+    {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes init-load-milla {
+    0% {
+        opacity: 0;
+        right: -7em;
+    }
+
+    100%
+    {
+        opacity: 1;
+        right: 0;
+    }
+}
